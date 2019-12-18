@@ -1,7 +1,7 @@
 # Storeon sessionStorage
 
-<img src="https://storeon.github.io/storeon/logo.svg" align="right"
-     alt="Storeon logo by Anton Lovchikov" width="160" height="142">
+<img src='https://storeon.github.io/storeon/logo.svg' align='right'
+     alt='Storeon logo by Anton Lovchikov' width='160' height='142'>
 
 Tiny module for [Storeon] to store and sync state to `sessionStorage`. It restores state from `sessionStorage` during page loading and saves state on every change.
 
@@ -32,37 +32,37 @@ npm install --save @storeon/sessionstorage
 If you want to store and sync state to `sessionStorage` you should import the `persistState` from `@storeon/sessionstorage` and add this module to `createStore`.
 
 ```js
-import createStore from "storeon"
-import persistState from "@storeon/sessionstorage"
+import createStore from 'storeon'
+import persistState from '@storeon/sessionstorage'
 
 let name = store => {
-  store.on("@init", () => ({ name: "" }))
-  store.on("save", (state, name) => ({ name: name }))
+  store.on('@init', () => ({ name: '' }))
+  store.on('save', (state, name) => ({ name: name }))
 };
 
-const store = createStore([name, persistState(["name"])])
+const store = createStore([name, persistState(['name'])])
 ```
 
 Here you can see that the form ask user the name and after that show this name.
 
 ```js
-import useStoreon from "storeon/react" // or storeon/preact for Preact
-import StoreContext from "storeon/react/context" // or storeon/preact/context for Preact
+import useStoreon from 'storeon/react' // or storeon/preact for Preact
+import StoreContext from 'storeon/react/context' // or storeon/preact/context for Preact
 
 const Form = () => {
-  const { dispatch, name } = useStoreon("name")
+  const { dispatch, name } = useStoreon('name')
 
   return (
     <React.Fragment>
-      {name !== "" && <h3>Hello {name}!</h3>}
-      {name === "" && (
+      {name !== '' && <h3>Hello {name}!</h3>}
+      {name === '' && (
         <div>
           <label>Name</label>
-          <input type="text" id="name" />
+          <input type='text' id='name' />
           <br />
           <button
             onClick={() =>
-              dispatch("save", document.getElementById("name").value)
+              dispatch('save', document.getElementById('name').value)
             }
           >
             Save
