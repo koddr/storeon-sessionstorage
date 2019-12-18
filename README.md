@@ -32,25 +32,25 @@ npm install --save @storeon/sessionstorage
 If you want to store and sync state to `sessionStorage` you should import the `persistState` from `@storeon/sessionstorage` and add this module to `createStore`.
 
 ```js
-import createStore from "storeon";
-import persistState from "@storeon/sessionstorage";
+import createStore from "storeon"
+import persistState from "@storeon/sessionstorage"
 
 let name = store => {
-  store.on("@init", () => ({ name: "" }));
-  store.on("save", (state, name) => ({ name: name }));
+  store.on("@init", () => ({ name: "" }))
+  store.on("save", (state, name) => ({ name: name }))
 };
 
-const store = createStore([name, persistState(["name"])]);
+const store = createStore([name, persistState(["name"])])
 ```
 
 Here you can see that the form ask user the name and after that show this name.
 
 ```js
-import useStoreon from "storeon/react"; // or storeon/preact for Preact
-import StoreContext from "storeon/react/context"; // or storeon/preact/context for Preact
+import useStoreon from "storeon/react" // or storeon/preact for Preact
+import StoreContext from "storeon/react/context" // or storeon/preact/context for Preact
 
 const Form = () => {
-  const { dispatch, name } = useStoreon("name");
+  const { dispatch, name } = useStoreon("name")
 
   return (
     <React.Fragment>
@@ -70,8 +70,8 @@ const Form = () => {
         </div>
       )}
     </React.Fragment>
-  );
-};
+  )
+}
 ```
 
 Event after refresh the page the state is updating from `sessionStorage`. And user see the greeting message.
@@ -81,7 +81,7 @@ Event after refresh the page the state is updating from `sessionStorage`. And us
 ### persistState(paths, config)
 
 ```js
-type paths = Void | Array<String>;
+type paths = Void | Array<String>
 ```
 
 If no pass the `paths` value then `persistState` store in local storage all state.
