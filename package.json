@@ -1,8 +1,8 @@
 {
-  "name": "@storeon/sessionstorage",
+  "name": "storeon-sessionstorage",
   "version": "0.6.3",
   "description": "Module for storeon to persist data from state to session storage",
-  "repository": "storeon/sessionstorage",
+  "repository": "koddr/storeon-sessionstorage",
   "author": "Vic Shóstak <vikkyshostak@gmail.com>",
   "license": "MIT",
   "scripts": {

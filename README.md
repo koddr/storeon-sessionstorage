@@ -24,16 +24,16 @@ _Please note: this module is a fork of [localStorage] by [Ivan Menshykov]. Becau
 ## Installation
 
 ```console
-npm install --save @storeon/sessionstorage
+npm install --save storeon-sessionstorage
 ```
 
 ## Usage
 
-If you want to store and sync state to `sessionStorage` you should import the `persistState` from `@storeon/sessionstorage` and add this module to `createStore`.
+If you want to store and sync state to `sessionStorage` you should import the `persistState` from `storeon-sessionstorage` and add this module to `createStore`.
 
 ```js
 import createStore from 'storeon'
-import persistState from '@storeon/sessionstorage'
+import persistState from 'storeon-sessionstorage'
 
 let name = store => {
   store.on('@init', () => ({ name: '' }))
