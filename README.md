@@ -9,7 +9,7 @@ The methods are the same of `localStorage`, **but there are significant limitati
 
 - `sessionStorage` exists only within current browser tab.
   - Another tab with the same page will have a different storage.
-  - But it's divided between `iframe` on the same tab (provided that they are from the same source).
+  - But it's shared between `iframe` on the same tab (provided that they are from the same source).
 - Data continues to exist after reloading the page, but not after closing/opening browser tab.
 
 It is just 172 bytes module (it uses [Size Limit] to control the size) without any dependencies.
