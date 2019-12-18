@@ -8,9 +8,9 @@
   "scripts": {
     "lint": "eslint *.js test/*.js test/demo/*.js --fix",
     "size": "size-limit",
-    "spell": "yarn docs && yaspeller *.md",
+    "spell": "npm run docs && yaspeller *.md",
     "docs": "documentation build *.js -f md -o api.md",
-    "test": "jest --coverage && yarn lint && size-limit && yarn spell",
+    "test": "jest --coverage && npm run lint && npm run size && npm run spell",
     "start": "parcel serve --cache-dir test/demo/.cache -d test/demo/dist test/demo/index.html --open"
   },
   "devDependencies": {
@@ -83,7 +83,10 @@
       "sessionStorage",
       "Tomas",
       "Sandven",
-      "eslint"
+      "eslint",
+      "Menshykov",
+      "localstorage",
+      "localStorage"
     ]
   }
 }

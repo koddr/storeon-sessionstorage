@@ -3,7 +3,9 @@
 <img src="https://storeon.github.io/storeon/logo.svg" align="right"
      alt="Storeon logo by Anton Lovchikov" width="160" height="142">
 
-Tiny module for [Storeon] to store and sync state to `sessionStorage`. It restores state from `sessionStorage` during page loading and saves state on every change. The methods are the same of `localStorage`, **but there are significant limitations:**
+Tiny module for [Storeon] to store and sync state to `sessionStorage`. It restores state from `sessionStorage` during page loading and saves state on every change.
+
+The methods are the same of `localStorage`, **but there are significant limitations:**
 
 - `sessionStorage` exists only within current browser tab.
   - Another tab with the same page will have a different storage.
