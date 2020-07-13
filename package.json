@@ -17,7 +17,7 @@
     "@logux/eslint-config": "^35.0.0",
     "@size-limit/preset-small-lib": "^3.0.1",
     "clean-publish": "^1.1.2",
-    "documentation": "^12.1.4",
+    "documentation": "^13.0.2",
     "eslint": "^6.6.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-es5": "^1.4.1",
